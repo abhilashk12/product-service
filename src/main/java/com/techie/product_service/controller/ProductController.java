@@ -17,6 +17,7 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<Product> create(@RequestBody Product product) {
+
         return ResponseEntity.ok(productService.create(product));
     }
 
