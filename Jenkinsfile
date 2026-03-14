@@ -12,12 +12,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/abhilashk12/product-service.git'
-            }
-        }
-
         stage('Build Jar') {
             steps {
                 sh 'mvn clean package -DskipTests'
