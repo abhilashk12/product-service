@@ -1,8 +1,12 @@
 spring:
   config:
-    import: optional:configserver:${CONFIG_SERVER_URL:http://config-server:8888}
+    import: "optional:configserver:"
+
+  cloud:
+    config:
+      uri: http://config-server.micro.local:8888
 
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URL:http://discovery-server:8761/eureka}
+      defaultZone: http://discovery-server.micro.local:8761/eureka
