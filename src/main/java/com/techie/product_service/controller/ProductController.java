@@ -69,4 +69,11 @@ public class ProductController {
                 productService.searchByName(name)
         );
     }
+
+    @DeleteMapping("/{idDummy}")
+    public ResponseEntity<Void> deleteDummy(@PathVariable Long id) {
+
+        productService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }
